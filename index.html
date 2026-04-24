@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner One &amp; Partner Two — Our Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay">
+      <p class="eyebrow">We're getting married</p>
+      <h1>Partner One<br /><span class="ampersand">&amp;</span><br />Partner Two</h1>
+      <p class="wedding-date">Saturday, October 18, 2025</p>
+      <p class="wedding-venue">The Grand Venue — City, State</p>
+
+      <!-- COUNTDOWN -->
+      <div id="countdown">
+        <div class="count-unit"><span id="days">--</span><label>Days</label></div>
+        <div class="count-unit"><span id="hours">--</span><label>Hours</label></div>
+        <div class="count-unit"><span id="minutes">--</span><label>Minutes</label></div>
+        <div class="count-unit"><span id="seconds">--</span><label>Seconds</label></div>
+      </div>
+
+      <a href="#rsvp" class="btn">RSVP Now</a>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details">
+    <h2>Wedding Details</h2>
+    <div class="details-grid">
+      <div class="detail-card">
+        <span class="icon">&#128337;</span>
+        <h3>Ceremony</h3>
+        <p>4:00 PM</p>
+        <p>The Grand Chapel</p>
+        <p>123 Maple Street, City, ST 00000</p>
+      </div>
+      <div class="detail-card">
+        <span class="icon">&#127870;</span>
+        <h3>Reception</h3>
+        <p>6:00 PM – Midnight</p>
+        <p>The Grand Ballroom</p>
+        <p>123 Maple Street, City, ST 00000</p>
+      </div>
+      <div class="detail-card">
+        <span class="icon">&#127968;</span>
+        <h3>Accommodations</h3>
+        <p>Hotel Name</p>
+        <p>Group rate available</p>
+        <p><a href="#">Book your room</a></p>
+      </div>
+      <div class="detail-card">
+        <span class="icon">&#127885;</span>
+        <h3>Dress Code</h3>
+        <p>Cocktail Attire</p>
+        <p>Colours: blush &amp; sage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOS
+       iCloud Shared Album setup:
+         1. iPhone/Mac Photos app → select album → Share → iCloud Link
+         2. Copy the https://www.icloud.com/photos/... URL
+         3. Paste it into the iframe src AND the "View full album" href below
+  -->
+  <section id="photos">
+    <h2>Our Story</h2>
+    <p class="section-sub">A few moments we love</p>
+
+    <div class="album-embed">
+      <iframe
+        src="YOUR_ICLOUD_SHARED_ALBUM_URL"
+        width="100%"
+        height="620"
+        frameborder="0"
+        allowfullscreen
+        title="Wedding Photo Album"
+      ></iframe>
+    </div>
+
+    <p class="album-link">
+      <a href="YOUR_ICLOUD_SHARED_ALBUM_URL" target="_blank" rel="noopener">Open full album &rarr;</a>
+    </p>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <h2>RSVP</h2>
+    <p class="section-sub">Kindly respond by September 1, 2025</p>
+    <div class="form-wrapper">
+      <!--
+        Replace the src below with your Google Form embed URL.
+        In Google Forms: Send → Embed → copy the src from the <iframe> tag.
+      -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+        width="100%"
+        height="820"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="RSVP Form"
+      >Loading…</iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Partner One &amp; Partner Two &nbsp;·&nbsp; October 18, 2025</p>
+    <p class="footer-sub">Made with love</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

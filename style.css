@@ -1,0 +1,277 @@
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:   #f5ede0;
+  --blush:   #d4a97a;
+  --sage:    #5a7a5a;
+  --charcoal:#2e2a22;
+  --gold:    #7a5c38;
+  --white:   #fdf8f2;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Lato', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--charcoal);
+  background: var(--cream);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a { color: var(--sage); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  text-align: center;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--sage);
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* ── Nav ── */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav a {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--gold); text-decoration: none; }
+
+/* ── Hero ── */
+#hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
+    url('photos/back.jpg') top center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-overlay { padding: 2rem; }
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+#hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 9vw, 6rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.ampersand {
+  font-style: italic;
+  color: var(--blush);
+}
+
+.wedding-date {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+
+.wedding-venue {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+
+/* Countdown */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.count-unit { text-align: center; }
+
+.count-unit span {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.count-unit label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid var(--white);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* ── Details ── */
+#details {
+  padding: 6rem 2rem;
+  background: var(--white);
+}
+
+#details h2 { margin-bottom: 0.5rem; }
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detail-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  background: var(--cream);
+}
+
+.detail-card .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.detail-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: var(--gold);
+}
+
+.detail-card p { font-size: 0.9rem; line-height: 1.8; }
+
+/* ── Photos ── */
+#photos {
+  padding: 6rem 2rem;
+  background: var(--cream);
+}
+
+.album-embed {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid rgba(122, 92, 56, 0.25);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.album-embed iframe { display: block; }
+
+.album-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── RSVP ── */
+#rsvp {
+  padding: 6rem 2rem;
+  background: var(--white);
+}
+
+.form-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  overflow: hidden;
+}
+
+.form-wrapper iframe { display: block; }
+
+/* ── Footer ── */
+footer {
+  background: var(--charcoal);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-sub {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  nav ul { gap: 1.2rem; }
+
+  #countdown { gap: 1.2rem; }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px;
+  }
+
+  .photo-item.tall,
+  .photo-item.wide { grid-row: span 1; grid-column: span 1; }
+}
+
+@media (max-width: 480px) {
+  .photo-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+}
