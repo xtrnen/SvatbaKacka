@@ -8,7 +8,7 @@
   --charcoal:#2e2a22;
   --gold:    #7a5c38;
   --white:   #fdf8f2;
-  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Lato', system-ui, sans-serif;
 }
 
@@ -136,6 +136,7 @@ nav a:hover { color: var(--gold); text-decoration: none; }
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 400;
   line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .count-unit label {
