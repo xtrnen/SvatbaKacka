@@ -10,6 +10,10 @@
   --white:   #fdf8f2;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Lato', system-ui, sans-serif;
+  --fw-serif-display: 400;  /* hero h1, large headings */
+  --fw-serif-heading:  400;  /* section h2, card h3    */
+  --fw-sans-body:      300;  /* body copy, nav, labels */
+  --fw-sans-ui:        400;  /* buttons, small caps     */
 }
 
 html { scroll-behavior: smooth; }
@@ -18,7 +22,7 @@ body {
   font-family: var(--font-sans);
   color: var(--charcoal);
   background: var(--cream);
-  font-weight: 300;
+  font-weight: var(--fw-sans-body);
   line-height: 1.6;
 }
 
@@ -28,7 +32,7 @@ a:hover { text-decoration: underline; }
 h2 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
+  font-weight: var(--fw-serif-heading);
   text-align: center;
   color: var(--charcoal);
   margin-bottom: 0.5rem;
@@ -98,7 +102,7 @@ nav a:hover { color: var(--gold); text-decoration: none; }
 #hero h1 {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 9vw, 6rem);
-  font-weight: 400;
+  font-weight: var(--fw-serif-display);
   line-height: 1.15;
   margin-bottom: 1.5rem;
 }
@@ -134,7 +138,7 @@ nav a:hover { color: var(--gold); text-decoration: none; }
   display: block;
   font-family: var(--font-serif);
   font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 400;
+  font-weight: var(--fw-serif-display);
   line-height: 1;
   font-variant-numeric: lining-nums tabular-nums;
 }
@@ -197,7 +201,7 @@ nav a:hover { color: var(--gold); text-decoration: none; }
 .detail-card h3 {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: var(--fw-serif-heading);
   margin-bottom: 0.75rem;
   color: var(--gold);
 }
